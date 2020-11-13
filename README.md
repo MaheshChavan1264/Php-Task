@@ -28,7 +28,13 @@
 
 ## Step Three:
 - After the opening of this url you can see the main page on which we can add the user details
+
+<br />
+
 <img src="Screenshot (14).png"/>
+
+<br />
+
 - Added the details to the form
 
 <br />
