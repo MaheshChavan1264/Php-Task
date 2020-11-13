@@ -1,8 +1,18 @@
 <?php
+
+//making the connection to the database using the connection configuration php file
 include "connection.php";
+
+//get the id from the row from which we need to update the data
 $id = $_GET['id'];
+
+//check the email is set or not
 if (isset($_POST['update'])) {
+
+    //get the email which we need to update in the database
     $email = $_POST['email'];
+
+    //update sql querry to update email
     $edit = mysqli_query($con, "update users set email='$email' where id='$id'");
     if ($edit) {
         mysqli_close($con); // Close connection

@@ -1,11 +1,20 @@
 <?php
-include "connection.php"; // Using database connection file here
-$id = $_GET['id']; // get id through query string
+
+//making the connection to the database using connection configuration file
+include "connection.php";
+
+// get id to delete the row from the table
+$id = $_GET['id'];
+
+//sql querry to delete the row from the table
 $del = mysqli_query($con, "delete from users where id = '$id'"); // delete query
 if ($del) {
-    mysqli_close($con); // Close connection
-    header("location:welcome.php"); // redirects to all records page
+    // Close connection
+    mysqli_close($con);
+    // redirects to all users data page
+    header("location:welcome.php");
     exit;
 } else {
-    echo "Error deleting record"; // display error message if not delete
+    // display error message if not delete
+    echo "Error deleting record";
 }
