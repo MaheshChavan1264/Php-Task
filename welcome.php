@@ -38,10 +38,10 @@ $result = $con->query($sql);
                     </tr>
                 </thead>
                 <?php
-//show all the data into the tables on the html pages
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        ?>
+                    //show all the data into the tables on the html pages
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                        ?>
                 <tbody>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
@@ -55,9 +55,7 @@ if ($result->num_rows > 0) {
                     </tr>
                 </tbody>
                 <?php
-}
-}
-?>
+                }}?>
             </table>
         </div>
     </div>
